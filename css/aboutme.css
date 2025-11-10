@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+header {
+    font-family: 'Lucida handwriting';
+    font-size: 1.5em;
+    color: white;
+    background-color: darkgrey;
+    text-align: center;
+    animation: rgbShadow 5s infinite;
+}
+@keyframes rgbShadow {
+    0% { box-shadow: 0 0 100px blue; }
+    100% { box-shadow: 0 0 100px blue; }
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+    gap: 200px;
+}
+
+ul a{
+    text-decoration: none;
+    color: darkblue;
+    margin-right: 70%;
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+}
+@keyframes hoverEffect {
+    0% { color: red; }
+    50% { color: darkblue; }
+}
+ul a:hover{
+    animation: hoverEffect 3s infinite;
+    font-weight: bold;
+    transition: all 1s ease;
+     color: darkblue;
+}
+    
+ul a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    width: 0;
+    height: 7px;
+    background-color: darkblue;
+    transition: width 0.4s ease;
+}
+ul a:hover::after {
+    width: 670%;
+}
+html{
+    background-color: rgb(57, 62, 70);
+}
+
+p{
+    border: 1px solid black;
+    box-shadow: 5px 5px 50px darkblue;
+    text-align: center;
+    margin-top: 6%;
+    margin-right: 50%;
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'Lucida handwriting';
+    color: white;
+    position: absolute;
+    background-color: darkgrey;
+    width: 70%;
+    animation: rgbShadow 5s infinite;
+    top:218px;
+    left:280px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 50%;
+    overflow: hidden;
+    height: 0;
+    max-width: 100%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 400px;
+    left: 450px;
+    width: 50%;
+    height: 50%;
+}
+.p2{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Lucida handwriting';
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    left: 280px;
+    top: 300px;
+    animation: rgbShadow 5s infinite;
+    width: 70%;
+}
+
+@media (max-width: 768px) {
+     
+    header {
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 15px;
+
+    }
+    
+}
